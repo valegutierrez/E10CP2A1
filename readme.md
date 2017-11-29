@@ -10,6 +10,7 @@
 
 ## Ejercicio 1: Método de clase
 El archivo *notas.txt* contiene las notas de 4 alumnos.
+
 ~~~
 David, 90, 60, 10, 30
 Mai, 40, 34, 77, 11
@@ -18,6 +19,7 @@ JP, 100, 100, 100, 99
 ~~~
 
 La clase *Alumno* posee un constructor que recibe el nombre del alumno junto a sus cuatro notas.
+
 ~~~rb
 class Alumno
   def initialize(nombre, nota1, nota2, nota3, nota4)
@@ -39,16 +41,18 @@ end
 print alumnos
 ~~~
 Se pide:
+
 - Crear un método de clase llamado *read_file* que reciba como argumento el <u>nombre del archivo</u> (por defecto debe ser 'notas.txt') y devuelva la colección de objetos. El método debe alojar las instrucciones que se encuentran después de la clase. Finalmente imprimir la colección de objetos generada.
     >Hint: Debes reemplazar el argumento de *File.open* con el nombre del argumento del método *read_file*.
 
 ## Ejercicio 2:
 Se tienen las clases *Rectangulo* y *Cuadrado* cuyos constructores reciben las medidas de los lados correspondientes.
+
 ~~~rb
 class Rectangulo
-  def initialize(largo, ancho)
-    @largo = largo
-    @ancho = ancho
+  def initialize(base, altura)
+    @base = base
+    @altura = altura
   end
 end
 
@@ -58,7 +62,9 @@ class Cuadrado
   end
 end
 ~~~
+
 Se pide:
+
 - Agregar un <u>método de instancia</u> llámado *lados* en ambas clases. El método debe imprimir un *string* con las medidas de los lados.
 - Crear un módulo llamado *Formula*. 
 - Dentro del módulo *Formula* crear un método llamado *perimetro* que reciba dos argumentos (lados) y devuelva el perímetro.
@@ -71,6 +77,7 @@ Se pide:
 
 ## Ejercicio 3: Rack
 Se tiene el archivo *config.ru* :
+
 ~~~rb
 # config.ru
 require 'rack'
@@ -83,9 +90,11 @@ class MiPrimeraWebApp
 end
 run MiPrimeraWebApp.new
 ~~~
+
 Crear un archivo llamado *404.html* cuyo *body* contenga una etiqueta de título con el texto *"No se ha encontrado la página :("*.
 
 Modificar el archivo ***config.ru*** para adaptarlo a los siguientes requerimientos:
+
  - Si se ingresa a la url ***/index***: 
     - Agregar un código de respuesta ***200***.
     - Agregar en los *Response Headers* un *Content-type* de tipo *text/html*.
